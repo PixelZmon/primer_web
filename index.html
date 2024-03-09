@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeLoVendo</title>
+    <link rel="stylesheet" type= "text/css" href="styles.css"></link>
+    <!--Importar CDN con iconos de bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
+    <!--Estilo de letra Satisfy-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body class="site">
+<header>
+    <h1><a href="index.html">TeLoVendoCL</a></h1>
+    <!--Ingresando menu de hamburguesa-->
+    <button id="abrir" class="list-button" >
+        <i class="bi bi-list"></i>
+    </button>
+    <nav class="nav" id="nav">
+        <!--Se ingresa la X para cerrar-->
+        <button id="cerrar" class="close-list" >
+            <i class="bi bi-x-square"></i>
+        </button>
+        <ul class="list">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<!--hr sirve para poner una linea que separa las secciones-->
+<main class ="contenido-sitio">
+<section class="info_empresa">
+    <h2>¿Quiénes somos?</h2>
+    <p>
+        Somos una empresa que se dedica a la venta de todo tipo de productos en línea. Nuestra empresa cuenta con 40 años de experiencia
+        llevando a cabo entregas a lo largo de Chile. Somos capaces de responder todos los requerimientos que exige día a día el mercado. Responsables 
+        y comprometidos con nuestros clientes. ¿Que esperas para hacer tu pedido con nosotros?
+    <p id="parrafo2">Para conocer nuestro catálogo haz clic <a href="#">aquí</a></p>
+    </p>
+</section >
+<section class="daily_offer">
+    <h3>!OFERTA DEL DÍA!</h3>
+    <h4>Desktop gamer - Intel core i9, Nvidia RTX 4090, 64gb, 512 ssd, refrigeración líquida</h4>
+    <img class="pruduct_offer"" src="https://cdnx.jumpseller.com/compuelite/image/43786947/thumb/610/610?1705599369" href="#" alt="Imagen del producto"></img>
+</section>
+</main>
+
+<footer class = "pie_pagina">
+    <p class="rights">&copy; Empresa "X"</p>
+    <p class="correo">Contacto:<a href="#">empresax@ventas.cl</a> o en el siguiente <a href="contacto.html">formulario</a></p>
+    <p>Equipo: Sebastián Ñanculao. Grupo: Entertaining Developmentt</p>
+    <p>Las Condes 117 piso 999. Santiago, Chile</p>
+</footer>
+<script src="responsive.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*border box- para que la caja no se desborde si se asigna padding o margin. Esto quiere decir
+    que el padding y margin con valores no se comparten con otras secciones*/
+    box-sizing: border-box;
+}
+/*Configuro el header con el nav para que se ven mas "decentes"*/
+header {
+    display: flex; /*Aplica flex direction row por defecto --> uno al lado del otro*/
+    background-color: orange;
+    padding: 0.3125rem;
+    /*Ajustar el texto al ancho del header*/
+    align-items: center; /*centra los objetos al alto del header*/
+    justify-content: space-evenly; /*espacio entre los elementos de padres e hijos
+    este comando es el que sirve para ajustar la posicion de los elementos superiores*/
+    position: relative;
+    /*Position absolute: El elemento busca la posicion relativa de elementos superiores*/
+    /*Position relative: posicion fija de elementos y puede contener position absolutes*/
+    z-index: 3; /*para que queden un objeto sobre otro*/
+}
+h1 a {
+    text-decoration: none;
+    color: white; 
+    font-family: Satisfy;
+    font-size: 3rem;
+}
+nav ul {
+    list-style: none;
+    gap: 5rem; /*en flexbox hace separacion entre hijos*/   
+}
+.list {
+    display: flex;
+}
+.list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-family: Satisfy;
+}
+/*Ocultar los botones. Para esto se usa display none -->oculto
+para mostrarlos en dispositivos usar display block*/
+.list-button,
+.close-list {
+    border: none;
+    display:none;
+}
+.list-button {
+    background-color: orange;
+    cursor: pointer;
+    color: white;
+
+}
+.close-list {
+    background-color: rgb(255, 181, 42);
+    cursor: pointer;
+    color: white;
+}
+/*Comienza la edicion de el main*/
+main {
+    padding: 0.3125rem 0.625rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h2 {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    text-align: center;
+}
+#parrafo2 {
+    padding-bottom: 1rem;
+}
+.daily_offer {
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    text-align: center;
+}
+/*IMAGEN RESPONSIVE: width:100% --> toma el 100% del body (su padre) y height: auto con su altura
+ajustandose automaticamente dependiendo del tamaño de pantalla*/
+img {
+    width: 100%;
+    height: auto;
+}
+/*Pie de pagina*/
+footer {
+    background-color: orange;
+    color:rgb(255, 255, 255);
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+.contentForm {
+    align-items: center;
+}
+.contenido-sitio {
+    flex: 1;
+}
+
+/*FORMULARIO*/
+.contact {
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+.item {
+    margin-bottom: 0.625rem;
+}
+.item label {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+.item input, .item textarea {
+    padding: 0.15rem;
+    width: 20rem;
+    box-sizing: border-box;
+}
+.send {
+    border: none;
+    background-color: orange;
+    padding:0.5rem 0.5rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(232, 120, 16);
+}
+/*RESPONSIVE*/
+@media screen and (max-width: 1200px) {
+    .close-list,
+    .list-button {
+        display: block;
+        font-size: 2rem;
+        color: white;
+    }
+    .nav {
+        opacity: 0; /*opacidad 0*/
+        /*Estilos del nav*/
+        visibility: hidden;
+        width: 30%; /*ancho usado máximo*/ 
+        /*visibility: hidden;¨*/ /*desaparecen las opciones del nav al llegar a 1000px
+        Se usa este comando solo para ocultar las opciones pero no eliminarlas, por eso
+        no se usa display none*/
+        background-color: rgb(255, 181, 42);
+        position: fixed; /*posicion fija, la ventana sigue a todos lados*/
+        padding: 1rem;
+        /*Cuando se usan comandos position se pueden usar top right y bottom*/
+        top: 0;  /*hace que el menu se ajuste y arriba del nav no falte ni sobre espacio*/
+        right: 0; /*ajusta el nav a la derecha de la pagina*/
+        bottom: 0; /*Alarga el menu de navegacion hasta el final de la pagina*/
+        z-index: 10; /*al darle un numero mayor al z-index del header, este elemento nav siempre quedara
+        sobre el header (se vera primero y tapara el fondo del header)*/
+    }
+    .nav.visible {
+        opacity: 1; /*darle opacidad al nav y hacerlo visible con visibility*/
+        visibility: visible;
+    }
+    .list {
+        display: flex; /*Ordena elementos en row, horizontal*/
+        margin-top: 2rem;;
+        flex-direction: column; /*cambia la direccion de los idems de row a columna vertical*/
+        align-items: flex-end; /*junta los items al final, por defecto es start, ak comienzo*/
+    }
+
+}
